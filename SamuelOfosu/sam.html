@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Senior Front-End Developer</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* === Global Styles (Luxury Car Theme) === */
+:root {
+    --ferrari-red: #ff2800;
+    --lambo-yellow: #fcee09;
+    --porsche-black: #0d0d0d;
+    --tesla-white: #f5f5f5;
+    --bugatti-blue: #1e90ff;
+    --rolls-silver: #c0c0c0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--tesla-white);
+    color: var(--porsche-black);
+    line-height: 1.6;
+}
+
+/* === Header (Ferrari Inspired) === */
+.ferrari-header {
+    background-color: var(--porsche-black);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.porsche-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mustang-logo {
+    color: var(--tesla-white);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.camaro-nav .corvette-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.audi-link {
+    color: var(--tesla-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.audi-link:hover {
+    color: var(--ferrari-red);
+}
+
+.bmw-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--tesla-white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* === Hero Section (Lamborghini Inspired) === */
+.lambo-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 5rem;
+    background: linear-gradient(135deg, var(--porsche-black) 0%, #333 100%);
+    color: var(--tesla-white);
+}
+
+.maserati-hero-content {
+    max-width: 50%;
+}
+
+.pagani-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.koenigsegg-highlight {
+    color: var(--ferrari-red);
+}
+
+.mclaren-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--rolls-silver);
+}
+
+.lotus-desc {
+    margin-bottom: 2rem;
+}
+
+.aston-button {
+    background-color: var(--ferrari-red);
+    color: var(--tesla-white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.aston-button:hover {
+    background-color: #d62200;
+}
+
+/* === About Section (Ferrari Inspired) === */
+.ferrari-about {
+    padding: 5rem;
+    text-align: center;
+}
+
+.porsche-about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.lambo-about-text {
+    text-align: left;
+    max-width: 50%;
+}
+
+.corvette-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.audi-item {
+    margin-bottom: 0.8rem;
+}
+
+.ford-icon {
+    margin-right: 0.5rem;
+    color: var(--ferrari-red);
+}
+
+/* === Projects Section (Bugatti Inspired) === */
+.ferrari-projects {
+    padding: 5rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.porsche-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.maserati-card {
+    background-color: var(--tesla-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    padding: 1.5rem;
+}
+
+.maserati-card:hover {
+    transform: translateY(-10px);
+}
+
+.jaguar-img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.mustang-title {
+    margin: 1rem 0;
+}
+
+/* === Contact Section (Rolls Royce Inspired) === */
+.ferrari-contact {
+    padding: 5rem;
+    text-align: center;
+}
+
+.porsche-form {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.maserati-input-group {
+    margin-bottom: 1.5rem;
+}
+
+.aston-input, .aston-textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.aston-textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* === Footer (Porsche Inspired) === */
+.ferrari-footer {
+    background-color: var(--porsche-black);
+    color: var(--tesla-white);
+    padding: 2rem;
+    text-align: center;
+}
+
+.porsche-footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lambo-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .camaro-nav {
+        display: none;
+    }
+
+    .bmw-hamburger {
+        display: block;
+    }
+
+    .lambo-hero, .porsche-about-content {
+        flex-direction: column;
+        padding: 5rem 2rem;
+    }
+
+    .maserati-hero-content, .lambo-about-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .ferrari-about, .ferrari-projects, .ferrari-contact {
+        padding: 3rem 2rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="ferrari-header">
+        <div class="porsche-navbar">
+            <h1 class="mustang-logo">Portfolio</h1>
+            <nav class="camaro-nav">
+                <ul class="corvette-list">
+                    <li><a href="#tesla-home" class="audi-link">Home</a></li>
+                    <li><a href="#lambo-about" class="audi-link">About</a></li>
+                    <li><a href="#bugatti-projects" class="audi-link">Projects</a></li>
+                    <li><a href="#rolls-contact" class="audi-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="bmw-hamburger">
+                <i class="ford-icon fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="tesla-home" class="lambo-hero">
+            <div class="maserati-hero-content">
+                <h2 class="pagani-title">Hi, I'm <span class="koenigsegg-highlight">Alex</span></h2>
+                <p class="mclaren-subtitle">Senior Front-End Developer</p>
+                <p class="lotus-desc">Crafting pixel-perfect, responsive web experiences with Figma, HTML, CSS & JavaScript.</p>
+                <button class="aston-button">View My Work</button>
+            </div>
+            <div class="bugatti-hero-img">
+                <img src="https://via.placeholder.com/500" alt="Developer Illustration" class="jaguar-img">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="lambo-about" class="ferrari-about">
+            <h2 class="pagani-title">About <span class="koenigsegg-highlight">Me</span></h2>
+            <div class="porsche-about-content">
+                <div class="maserati-about-img">
+                    <img src="https://via.placeholder.com/400" alt="Profile Image" class="jaguar-img">
+                </div>
+                <div class="lambo-about-text">
+                    <p class="lotus-desc">With <span class="koenigsegg-highlight">5+ years</span> of experience, I specialize in:</p>
+                    <ul class="corvette-list">
+                        <li class="audi-item"><i class="ford-icon fas fa-check"></i> Figma Prototyping</li>
+                        <li class="audi-item"><i class="ford-icon fas fa-check"></i> Responsive CSS</li>
+                        <li class="audi-item"><i class="ford-icon fas fa-check"></i> JavaScript (ES6+)</li>
+                        <li class="audi-item"><i class="ford-icon fas fa-check"></i> UI/UX Design</li>
+                    </ul>
+                    <button class="aston-button">Download Resume</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="bugatti-projects" class="ferrari-projects">
+            <h2 class="pagani-title">My <span class="koenigsegg-highlight">Projects</span></h2>
+            <div class="porsche-projects-grid">
+                <div class="maserati-card">
+                    <img src="https://via.placeholder.com/300" alt="Project 1" class="jaguar-img">
+                    <h3 class="mustang-title">E-Commerce Dashboard</h3>
+                    <p class="lotus-desc">Fully responsive admin panel built with React.</p>
+                    <button class="aston-button">View Demo</button>
+                </div>
+                <div class="maserati-card">
+                    <img src="https://via.placeholder.com/300" alt="Project 2" class="jaguar-img">
+                    <h3 class="mustang-title">Portfolio Template</h3>
+                    <p class="lotus-desc">Minimalist portfolio design in Figma & CSS.</p>
+                    <button class="aston-button">View Code</button>
+                </div>
+                <div class="maserati-card">
+                    <img src="https://via.placeholder.com/300" alt="Project 3" class="jaguar-img">
+                    <h3 class="mustang-title">Weather App</h3>
+                    <p class="lotus-desc">Real-time weather data with JavaScript API.</p>
+                    <button class="aston-button">Live Preview</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="rolls-contact" class="ferrari-contact">
+            <h2 class="pagani-title">Get In <span class="koenigsegg-highlight">Touch</span></h2>
+            <form class="porsche-form">
+                <div class="maserati-input-group">
+                    <input type="text" class="aston-input" placeholder="Name">
+                </div>
+                <div class="maserati-input-group">
+                    <input type="email" class="aston-input" placeholder="Email">
+                </div>
+                <div class="maserati-input-group">
+                    <textarea class="aston-textarea" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="aston-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="ferrari-footer">
+        <div class="porsche-footer-content">
+            <p class="lotus-desc">© 2023 Portfolio. All rights reserved.</p>
+            <div class="lambo-socials">
+                <a href="#" class="audi-link"><i class="ford-icon fab fa-github"></i></a>
+                <a href="#" class="audi-link"><i class="ford-icon fab fa-linkedin"></i></a>
+                <a href="#" class="audi-link"><i class="ford-icon fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+const bmwHamburger = document.querySelector('.bmw-hamburger');
+const camaroNav = document.querySelector('.camaro-nav');
+
+bmwHamburger.addEventListener('click', () => {
+    camaroNav.classList.toggle('active');
+});
+
+// Smooth Scrolling for Navigation
+document.querySelectorAll('.audi-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        window.scrollTo({
+            top: targetSection.offsetTop - 80,
+            behavior: 'smooth'
+        });
+
+        // Close mobile menu if open
+        if (camaroNav.classList.contains('active')) {
+            camaroNav.classList.remove('active');
+        }
+    });
+});
+
+// Form Submission Handling
+const porscheForm = document.querySelector('.porsche-form');
+porscheForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Message sent successfully!');
+    porscheForm.reset();
+});
+    </script>
+</body>
+</html>
